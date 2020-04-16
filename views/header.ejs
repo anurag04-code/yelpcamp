@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<style>
+	.thumbnail img {
+	object-fit : cover ;
+    width: 100%;
+	height : 100% ;	
+}
+.lead {
+	color :	#006400;
+	font-size : 40px !important;
+}
+.thumbnail {
+	padding:0;
+	border : 0.1px solid #ebcf34;} 			
+		
+			#thumbnail:hover{
+				text-decoration : none ;
+				border : 4px solid #BC8F8F ;
+				background :#BC8F8F ;
+			}
+.thumbnail .caption-full {
+	padding : 9px ;
+}
+	#link:hover {
+				color : red !important;
+			}
+a:hover {
+	color : #ebcf34 !important ;			
+}	
+#a {
+	background : black ;
+	border : 1px solid black;
+}			
+a {
+	color: white !important;
+}
+
+body {
+	background :#ADFF2F! important ;
+}
+			.jumbotron {
+				background : black !important;
+				color : white ! important ;
+			}			
+			#header {
+		color : #ff0000;
+		text-shadow : 2px 2px black;
+	}
+#we {
+		padding-left : 8% ;
+		padding-top : 4% ;
+		padding-bottom : 2% ;
+	}
+	.list{
+		background :	#A52A2A!important;
+		color : white ;
+		border-radius : 5% ;
+	}
+.ab {
+		background : white ;
+		padding : 10px ;
+		line-height : 30px;
+		font-size : 140% ;
+		border-radius : 10% ;
+		word-spacing : 4px;
+		font-family: 'PT Sans Narrow', sans-serif;
+	}
+</style>
+<html>
+	<head>
+		<title></title>
+		<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href='style.css'>
+	</head>
+	<body>
+	<nav class="navbar navbar-default" id="a">
+        <div class="container-fluid">
+            <div class="navbar-header">
+				<a class="navbar-brand" href="/">YelpCamp</a>
+            </div>
+			<div class="nav navbar-nav navbar-left">
+				<li><a href='/campagrounds'><span class="glyphicon glyphicon-globe"></span> Discover</a></li>
+				<li><a href='/campagrounds/about'><span class="glyphicon glyphicon-info-sign" ></span> About</a></li>
+			</div>
+			<div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+					<% if(!currentUser){ %>
+                    	<li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    	<li><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+					<% }else{ %>
+						<li><a href='#'><span class="glyphicon glyphicon-user"></span> Signed In as <%= currentUser.username %></a></li>
+                    	<li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+					<% } %>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	<div class="container">
+		<% if(error && error.length>0){ %>
+			<div class="alert alert-danger" role="alert">
+				<%= error %>
+			</div>
+		<% } %>
+		<% if(success && success.length>0){ %>
+			<div class="alert alert-success" role="alert">
+				<%= success %>
+			</div>
+		<% } %>
+	</div>	

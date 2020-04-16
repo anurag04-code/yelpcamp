@@ -1,0 +1,49 @@
+<%- include("header") %>
+<style>
+	#q:hover {
+		background : lightblue;
+		color : black ! important;
+	}
+	h1 {
+		text-shadow : 3px 3px #ff0000;
+	}
+	h4{
+		text-shadow : 1px 1px #FFFF00;
+	}
+	#thumbnail {
+		border-radius : 10%;
+		padding : 0;
+	}
+	.thumbnail img {
+		border-radius : 8% ;
+	}
+
+
+</style>
+<div class="container">
+	<header class="jumbotron">
+		<div class="container">
+			<h1><span class="glyphicon glyphicon-tent"></span> Welcome to YELPCAMP</h1>
+			<p>
+				View our hand-picked campgrounds from all over the world!! 
+			</p>
+			<p>
+				<a id="q"class="btn btn-primary btn-lg"href='/campagrounds/new'>Add Campgrounds</a>
+			</p>
+		</div>
+	</header>
+	
+	<div class="row text-center"  style="display : flex ; flex-wrap : wrap ;" >
+		<% k.forEach(function(team){ %>
+			<div class="col-lg-3 col-sm-6 ">
+				<a class="thumbnail" id="thumbnail"href='/campagrounds/<%= team._id %>'>
+					<img src="<%= team.image %>">
+					<div class="caption" style="padding : 0">
+						<h4><%= team.name %> </h4>
+					</div>	
+				</a>
+			</div>
+		<% }); %>	
+	</div>		
+</div>
+<%- include("footer") %>
