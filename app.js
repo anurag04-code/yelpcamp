@@ -19,9 +19,15 @@ app.use(express.static(__dirname + "/public"))
 app.set("view engine" , "ejs");
 app.use(bodyparser.urlencoded({extended: true}));
 app.use(methodOverride("_method"));
+
+
 mongoose.set('useUnifiedTopology', true)
 mongoose.set('useFindAndModify' , false)
-mongoose.connect('mongodb://localhost:27017/yelpcamp', { useNewUrlParser: true });
+//mongoose.connect('mongodb://localhost:27017/yelpcamp', { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://anumat04:Shyamnagar1@yelpcamp-k62br.mongodb.net/test?retryWrites=true&w=majority' ,{ useNewUrlParser:true ,useCreateIndex : true}).then(() => {
+	console.log("connected to DB");}).catch(err => {
+	console.log("ERROR" , err.message);});
+
 seedDB();
 app.use(flash())
 
