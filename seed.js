@@ -11,6 +11,8 @@ var data =[
 	},
 	{
 		name:"Quil camps" , image:"https://koa.com/blog/images/solo-camping-tips.jpg?preset=blogPhoto" , price:"9.03",description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." , loc:"near Sydeny, Australia", bw:"june-july",ac:"Farm-House,Car",am:"Wi-fi,Towel",author:{username:"Anurag" , id:'5e8ec8c86e6b5006c1169bfb'}
+	},
+	{name:"Tented Tee" , image:"https://www.tripsavvy.com/thmb/ekAcrsKGhqVjsQvxnMJpjv1ymvw=/2137x1403/filters:fill(auto,1)/sunrise-camping--676019412-5b873a5a46e0fb0050f2b7e0.jpg" , price:"9.03",description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." , loc:"near Mumbai, India", bw:"june-july",ac:"Farm-House,Car",am:"Wi-fi,Towel",author:{username:"Anurag" , id:'5e8ec8c86e6b5006c1169bfb'}
 	}
 ]
 
