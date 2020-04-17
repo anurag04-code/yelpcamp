@@ -58,7 +58,7 @@ app.use("/campagrounds" ,campagroundsRoutes);
 app.use("/campagrounds/:id/comments" ,commentsRoutes);
 
 
-app.listen(process.env.PORT || 4000 , function(){
+app.listen(process.env.PORT || 4000 , process.env.IP ,function(){
 	console.log("Server Started..")
 })
 
