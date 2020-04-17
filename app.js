@@ -24,9 +24,6 @@ app.use(methodOverride("_method"));
 mongoose.set('useUnifiedTopology', true)
 mongoose.set('useFindAndModify' , false)
 mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
-//mongoose.connect('mongodb+srv://anumat04:Shyamnagar1@yelpcamp-k62br.mongodb.net/test?retryWrites=true&w=majority' ,{ useNewUrlParser:true ,useCreateIndex : true}).then(() => {
-//	console.log("connected to DB");}).catch(err => {
-//	console.log("ERROR" , err.message);});
 
 seedDB();
 app.use(flash())
