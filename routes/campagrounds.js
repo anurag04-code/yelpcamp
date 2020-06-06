@@ -51,26 +51,6 @@ router.get('/about' ,function(req,res){
 	res.render("about")
 })
 
-router.get('/:id', function(req,res){			Campaground.findById(req.params.id).populate("comments").exec(function(err,cpg){
-		if(err || !cpg){
-			req.flash("error" , "Campground not found");
-			res.redirect("back");
-		}else{
-			res.render("show" , {Campaground:cpg});
-		}
-});	
-});
-
-router.get('/:id/edit',middleware.CheckcampagroundOwnership,function(req,res){
-	Campaground.findById(req.params.id , function(err,campagrounds){
-		if(err){
-			res.redirect('/campagrounds')
-		}else{
-			res.render("edit" , {campagrounds:campagrounds})		
-		}
-	})
-})
-
 router.put("/:id", middleware.CheckcampagroundOwnership,function (req, res) {
     Campaground.findByIdAndUpdate(req.params.id,{name:req.body.name, price:req.body.price , image:req.body.image , description:req.body.description}, function (err, updatedCampground) {
         if (err) {
